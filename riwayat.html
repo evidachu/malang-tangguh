@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Riwayat Laporan Banjir</title>
+  <link rel="stylesheet" href="riwayat.css" />
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-left">
+          <img src="logo.png" alt="Malang Tangguh Logo" class="logo">
+        </div>
+      
+        <div class="header-center">
+          <nav class="header-nav">
+            <div class="dropdown">
+              <button class="dropbtn">Menu <span>&#9662;</span></button>
+              <div class="dropdown-content">
+                <a href="#">Form Laporan</a>
+                <a href="#">Laporan Banjir Terkini</a>
+                <a href="#">Proyek</a>
+                <a href="#">Panduan Banjir</a>
+                <a href="#">Daerah Rawan</a>
+              </div>
+            </div>
+          </nav>
+          <span class="nav-item emergency">Telepon Darurat</span>
+          <span class="nav-item about">Tentang Kami</span>          
+        </div>
+      
+        <div class="header-right">
+          <div class="profile-dropdown" id="profileDropdown">
+            <button class="login-btn" id="loginBtn">Login</button>
+            <button class="profile-btn" id="profileBtn" style="display:none;">
+              <span class="profile-circle">A</span>
+            </button>
+            <div class="profile-menu" id="profileMenu" style="display:none;">
+              <a href="#">Profile</a>
+              <a href="#">Logout</a>
+            </div>
+          </div>
+        </div>
+      </header>      
+
+  <!-- MAIN -->
+  <main class="laporan-container">
+    <h2 class="judul-laporan">Riwayat Laporan Banjir</h2>
+
+        <div class="filter-section">
+          <input type="date" class="filter-dropdown" />
+          <select class="filter-dropdown">
+            <option selected disabled>Pilih Kecamatan</option>
+            <option>Blimbing</option>
+            <option>Kedungkandang</option>
+            <option>Klojen</option>
+            <option>Lowokwaru</option>
+            <option>Sukun</option>
+          </select>
+        </div>
+
+        <div class="table-wrapper">
+            <table class="laporan-tabel">
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>Kecamatan</th>
+                  <th>Jalan</th>
+                  <th>Keterangan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td></td><td></td><td></td></tr>
+                <tr><td>2</td><td></td><td></td><td></td></tr>
+                <tr><td>3</td><td></td><td></td><td></td></tr>
+                <tr><td>4</td><td></td><td></td><td></td></tr>
+                <tr><td>5</td><td></td><td></td><td></td></tr>
+                <tr><td>6</td><td></td><td></td><td></td></tr>
+                <tr><td>7</td><td></td><td></td><td></td></tr>
+                <tr><td>8</td><td></td><td></td><td></td></tr>
+                <tr><td>9</td><td></td><td></td><td></td></tr>
+                <tr><td>10</td><td></td><td></td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-bar">
+        © Malang Tangguh - Kelompok 2
+    </div>
+</footer>
+
+</body>
+</html>
