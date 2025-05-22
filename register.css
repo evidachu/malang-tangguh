@@ -19,9 +19,12 @@ body {
   margin-bottom: 20px;
 }
 
-.logo-container img {
-  width: 80px;
-  margin-bottom: 8px;
+.logo {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  max-width: auto;
+  height: 90px;
 }
 
 .logo-container h1 {

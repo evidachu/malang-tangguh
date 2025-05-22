@@ -4,8 +4,17 @@ body {
   background: linear-gradient(to bottom right, #a6c7e8, #e0f0ff);
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  max-width: auto;
+  height: 90px;
 }
 
 .login-container {
@@ -14,16 +23,15 @@ body {
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
   width: 320px;
-}
-
-.login-container img {
-  width: 80px;
-  margin-bottom: 10px;
 }
 
 .login-container h2 {
   margin-bottom: 20px;
+  margin-top: 1px;
   color: #003366;
 }
 
@@ -39,7 +47,7 @@ body {
 }
 
 .form-group input {
-  width: 100%;
+  width: 300px;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
