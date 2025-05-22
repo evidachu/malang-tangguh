@@ -5,45 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Riwayat Laporan Banjir</title>
   <link rel="stylesheet" href="riwayat.css" />
+  <link rel="stylesheet" href="header-footer.css">
 </head>
 <body>
-
-    <header class="header">
-        <div class="header-left">
-          <img src="logo.png" alt="Malang Tangguh Logo" class="logo">
-        </div>
-      
-        <div class="header-center">
-          <nav class="header-nav">
-            <div class="dropdown">
-              <button class="dropbtn">Menu <span>&#9662;</span></button>
-              <div class="dropdown-content">
-                <a href="#">Form Laporan</a>
-                <a href="#">Laporan Banjir Terkini</a>
-                <a href="#">Proyek</a>
-                <a href="#">Panduan Banjir</a>
-                <a href="#">Daerah Rawan</a>
-              </div>
-            </div>
-          </nav>
-          <span class="nav-item emergency">Telepon Darurat</span>
-          <span class="nav-item about">Tentang Kami</span>          
-        </div>
-      
-        <div class="header-right">
-          <div class="profile-dropdown" id="profileDropdown">
-            <button class="login-btn" id="loginBtn">Login</button>
-            <button class="profile-btn" id="profileBtn" style="display:none;">
-              <span class="profile-circle">A</span>
-            </button>
-            <div class="profile-menu" id="profileMenu" style="display:none;">
-              <a href="#">Profile</a>
-              <a href="#">Logout</a>
-            </div>
-          </div>
-        </div>
-      </header>      
-
+<div id="header-include"></div>
   <!-- MAIN -->
   <main class="laporan-container">
     <h2 class="judul-laporan">Riwayat Laporan Banjir</h2>
@@ -86,12 +51,16 @@
           </div>
         </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-bar">
-        © Malang Tangguh - Kelompok 2
-    </div>
-</footer>
+<div id="footer-include"></div>
 
+    <script>
+        fetch('header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header-include').innerHTML = data);
+
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer-include').innerHTML = data);
+    </script>
 </body>
 </html>
