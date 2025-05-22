@@ -171,6 +171,11 @@
   font-size: 1.1rem;
 }
 
+.profile-btn,
+.profile-menu {
+    display: none;
+}
+
 .profile-menu {
   display: none;
   position: absolute;
