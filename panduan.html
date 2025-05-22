@@ -6,24 +6,10 @@
   <title>Panduan Menghadapi Banjir</title>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="panduan.css">
+  <link rel="stylesheet" href="header-footer.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">
-      <img src="asset/logo malang tangguh.png" alt="Malang Tangguh Logo" class="logo">
-    </div>
-    <nav class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">Riwayat Laporan</a>
-      <a href="#">Kontak</a>
-      <a href="#">Tentang Kami</a>
-    </nav>
-    <div class="profile">
-      <div class="circle"></div>
-      <button class="logout">LOGOUT</button>
-    </div>
-  </header>
-
+  <div id="header-include"></div>
   <main class="container">
     <section class="main-content">
       <div class="title-box">
@@ -78,5 +64,16 @@
       </div>
     </aside>
   </main>
+  <div id="footer-include"></div>
+
+    <script>
+        fetch('header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header-include').innerHTML = data);
+
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer-include').innerHTML = data);
+    </script>
 </body>
 </html>
