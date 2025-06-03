@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -11,7 +15,7 @@
   <link rel="stylesheet" href="header-footer.css">
 </head>
 <body>
-  <div id="header-include"></div>
+  <?php include 'header.php'; ?>
   <main class="container">
     <section class="main-content">
       <div class="title-box">
@@ -77,7 +81,7 @@
   <div id="footer-include"></div>
 
     <script>
-        fetch('header.html')
+        fetch('header.php')
             .then(res => res.text())
             .then(data => document.getElementById('header-include').innerHTML = data);
 

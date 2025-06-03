@@ -1,3 +1,12 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+$loggedIn = isset($_SESSION['user_id']);
+$userEmail = $loggedIn ? $_SESSION['email'] : '';
+$userName = $loggedIn ? $_SESSION['nama'] : '';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +17,7 @@
     <link rel="stylesheet" href="header-footer.css">
 </head>
 <body>
-    <div id="header-include"></div>
+    <?php include 'header.php'; ?>
     <main>
         <section class="hero" align="middle">
             <div class="hero-bg"></div>
@@ -16,23 +25,23 @@
                 <h1>Malang Tangguh <span class="weather-icon">&#9729;</span></h1>
                 <p>Selamat datang di website pelaporan banjir Kota Malang.</p>
                 <div class="features">
-                    <a href="form.html" class="feature-card fc1">
+                    <a href="form.php" class="feature-card fc1">
                         <img src="asset/Submit.png" alt="Form Laporan">
                         <span>Form Laporan</span>
                     </a>
-                    <a href="riwayat.html" class="feature-card fc2">
+                    <a href="riwayat.php" class="feature-card fc2">
                         <img src="asset/Clipboard.png" alt="Laporan Banjir Terkini">
                         <span>Laporan Banjir Terkini</span>
                     </a>
-                    <a href="proyek.html" class="feature-card fc3">
+                    <a href="proyek.php" class="feature-card fc3">
                         <img src="asset/Engineers.png" alt="Proyek">
                         <span>Proyek</span>
                     </a>
-                    <a href="panduan.html" class="feature-card fc4">
+                    <a href="panduan.php" class="feature-card fc4">
                         <img src="asset/Information.png" alt="Panduan Banjir">
                         <span>Panduan Banjir</span>
                     </a>
-                    <a href="peta.html" class="feature-card fc5">
+                    <a href="peta.php" class="feature-card fc5">
                         <img src="asset/Location.png" alt="Daerah Rawan">
                         <span>Daerah Rawan</span>
                     </a>
@@ -138,7 +147,7 @@
     <div id="footer-include"></div>
 
     <script>
-        fetch('header.html')
+        fetch('header.php')
             .then(res => res.text())
             .then(data => document.getElementById('header-include').innerHTML = data);
 

@@ -1,3 +1,18 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Redirect jika user belum login
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php');
+    exit();
+}
+
+$nama = $_SESSION['nama'] ?? 'Tidak tersedia';
+$email = $_SESSION['email'] ?? 'Tidak tersedia';
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -5,6 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Profil Pengguna - Malang Tangguh</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     body {
       margin: 0;
@@ -49,6 +65,15 @@
       gap: 16px;
     }
 
+    .profile-data {
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    min-height: 20px;
+    }
+
     .form-group {
       display: flex;
       flex-direction: column;
@@ -73,7 +98,7 @@
     .button-container {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 2px;
       margin-top: 10px;
     }
 
@@ -103,52 +128,81 @@
     .logout-button:hover {
       background: #d32f2f;
     }
+
+    .logout-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        text-decoration: none;
+        color: white;
+        background: #f44336;
+        padding: 12px;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: background 0.3s;
+    }
+
+    .logout-link:hover {
+        background: #d32f2f;
+    }
+
+    .logout-link i {
+        font-size: 16px;
+    }
+
+    .fas {
+      margin-right: 8px;
+    }
+
+    /* Add this inside the existing <style> tag */
+.back-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    text-decoration: none;
+    color: white;
+    background: #003b73;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.back-link:hover {
+    background: #00315f;
+}
   </style>
 </head>
+
 <body>
   <div class="profile-container">
     <div class="profile-header">
       <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Foto Profil">
       <h2>Profil Pengguna</h2>
     </div>
-    <form class="profile-form">
+    <div class="profile-form">
       <div class="form-group">
-        <label for="nama">Nama Lengkap</label>
-        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap">
+        <label>Nama Lengkap</label>
+        <div class="profile-data"><?php echo htmlspecialchars($nama); ?></div>
       </div>
       <div class="form-group">
-        <label for="nik">Nomor Identitas (NIK/NIM/NIP)</label>
-        <input type="text" id="nik" name="nik" placeholder="Masukkan nomor identitas">
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Masukkan email">
-      </div>
-      <div class="form-group">
-        <label for="telepon">Nomor Telepon</label>
-        <input type="tel" id="telepon" name="telepon" placeholder="Masukkan nomor telepon">
-      </div>
-      <div class="form-group">
-        <label for="alamat">Alamat Domisili</label>
-        <input type="text" id="alamat" name="alamat" placeholder="Masukkan alamat domisili">
-      </div>
-      <div class="form-group">
-        <label for="jenis_kelamin">Jenis Kelamin</label>
-        <select id="jenis_kelamin" name="jenis_kelamin">
-          <option value="">Pilih</option>
-          <option value="Laki-laki">Laki-laki</option>
-          <option value="Perempuan">Perempuan</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="tanggal_lahir">Tanggal Lahir</label>
-        <input type="date" id="tanggal_lahir" name="tanggal_lahir">
+        <label>Email</label>
+        <div class="profile-data"><?php echo htmlspecialchars($email); ?></div>
       </div>
       <div class="button-container">
-        <button type="submit" class="edit-button">Simpan Perubahan</button>
-        <button type="button" class="logout-button">Logout</button>
+        <a href="logout.php" class="logout-link">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+        </a>
+        <a href="landing-page.php" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            <span>Kembali ke Beranda</span>
+        </a>
       </div>
-    </form>
+    </div>
   </div>
 </body>
 </html>
