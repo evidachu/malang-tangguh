@@ -37,6 +37,7 @@ while($row = $result->fetch_assoc()) {
             margin: 10px; 
             color: #00796b; 
         }
+    
 
         /* Pastikan container peta juga memiliki tinggi */
         .container {
@@ -46,6 +47,7 @@ while($row = $result->fetch_assoc()) {
             padding: 20px;
             text-align: center;
             min-height: 600px;
+            
         }
     </style>
 </head>

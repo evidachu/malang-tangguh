@@ -58,42 +58,48 @@ $userName = $loggedIn ? $_SESSION['nama'] : '';
         <section class="cards-section" id="cards-section">
             <div class="card-row">
                 <div class="info-card blue">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOeZpqtzcJVKEkiq1R1RCAwXF1B9_v85aDoA&s" alt="Form Laporan Banjir">
+                    <img src="asset/form.jpg " alt="Form Laporan Banjir"
+                    style="width: 283px; height: 250px;" />
                     <div>
                         <h2>Form Laporan Banjir</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.</p>
+                        <p>Fitur Laporan Kejadian Banjir memungkinkan masyarakat untuk memberikan informasi terkait kejadian banjir di sekitar mereka secara langsung. Pengguna dapat memilih lokasi kejadian berdasarkan wilayah dan nama jalan yang terdampak, serta mengisi waktu dan tanggal terjadinya banjir. Tersedia juga kolom opsional untuk mencantumkan tinggi air dalam satuan sentimeter. Selain itu, pengguna dapat mengunggah foto sebagai bukti visual dan menambahkan deskripsi kejadian untuk memberikan informasi tambahan. Fitur ini dirancang agar laporan yang masuk dapat segera dianalisis dan ditindaklanjuti oleh pihak terkait secara cepat dan akurat.</p>
                     </div>
                 </div>
             </div>
             <div class="card-row">
                 <div class="info-card green">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOeZpqtzcJVKEkiq1R1RCAwXF1B9_v85aDoA&s" alt="Proyek Anti Banjir">
+                    <img src="asset/proyek.jpg" alt="Proyek Anti Banjir"
+                    style="width: 283px; height: 250px;" />
+                   
                     <div>
                         <h2>Proyek Anti Banjir</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.</p>
+                        <p>Fitur Proyek Anti Banjir Kota Malang menampilkan informasi terkini mengenai berbagai inisiatif pemerintah dalam upaya mengurangi risiko banjir di wilayah Kota Malang. Setiap proyek disertai dengan lokasi spesifik, status pengerjaan, dan ringkasan informasi yang memberikan gambaran jelas kepada masyarakat mengenai langkah-langkah yang sedang dijalankan. Melalui fitur ini, warga dapat memantau perkembangan proyek secara transparan serta memahami dampak dan manfaatnya bagi lingkungan sekitar. Tautan “Baca Selengkapnya” memungkinkan akses ke informasi lebih lengkap tentang progres, tujuan, dan pihak yang bertanggung jawab dalam pelaksanaannya.</p>
                     </div>
                 </div>
                 <div class="info-card orange">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOeZpqtzcJVKEkiq1R1RCAwXF1B9_v85aDoA&s" alt="Panduan Banjir">
+                    <img src="asset/panduan.jpg" alt="Panduan Banjir"
+                    style="width: 283px; height: 250px;" />
                     <div>
                         <h2>Panduan Banjir</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.</p>
+                        <p>Fitur Panduan Menghadapi Banjir memberikan langkah-langkah praktis untuk meningkatkan kesiapsiagaan dan keselamatan masyarakat sebelum dan saat banjir terjadi. Panduan ini mencakup pemeriksaan dan pembersihan saluran air sebelum musim hujan, persiapan karung pasir untuk mencegah masuknya air ke dalam rumah, serta pengamanan barang-barang penting dan dokumen dengan memindahkannya ke tempat yang lebih tinggi. Pengguna juga diarahkan untuk menyiapkan rute evakuasi dan berkoordinasi dengan keluarga maupun tetangga. Fitur ini juga menjelaskan daftar barang penting, peringatan tentang tindakan yang harus dihindari saat banjir, serta tips tambahan agar tetap aman</p>
                     </div>
                 </div>
             </div>
             <div class="card-row">
                 <div class="info-card yellow">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOeZpqtzcJVKEkiq1R1RCAwXF1B9_v85aDoA&s" alt="Area Rawan Banjir">
+                    <img src="asset/area.jpg" alt="Area Rawan Banjir"
+                    style="width: 283px; height: 250px;" />
                     <div>
                         <h2>Area Rawan Banjir</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.</p>
+                        <p>Fitur Area Rawan Banjir menampilkan peta interaktif yang menandai lokasi-lokasi di Kota Malang yang berisiko tinggi mengalami banjir. Pengguna dapat melihat titik-titik rawan banjir lengkap dengan keterangan penyebabnya, seperti meluapnya sungai di sekitar Jl. Lorem Ipsum. Peta ini memanfaatkan data dari OpenStreetMap sehingga informasi lokasi dapat diakses secara akurat dan mudah dipahami. Dengan fitur ini, masyarakat dan pihak terkait dapat lebih waspada dan melakukan langkah antisipasi di daerah-daerah tersebut.</p>
                     </div>
                 </div>
                 <div class="info-card tosca">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOeZpqtzcJVKEkiq1R1RCAwXF1B9_v85aDoA&s" alt="Laporan Banjir Terkini">
+                    <img src="asset/laporan.jpg" alt="Laporan Banjir Terkini"
+                    style="width: 283px; height: 250px;" />
                     <div>
                         <h2>Laporan Banjir Terkini</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.</p>
+                        <p>Fitur Riwayat Laporan Banjir menampilkan daftar laporan banjir yang telah dikirim oleh masyarakat atau pihak terkait. Pengguna dapat mencari laporan berdasarkan kata kunci dan menyaring data berdasarkan kecamatan yang dipilih. Setiap entri laporan mencakup informasi penting seperti tanggal dan waktu kejadian, lokasi kecamatan dan nama jalan, tinggi air (jika tersedia), deskripsi singkat kejadian, serta tautan untuk melihat foto bukti. Fitur ini bertujuan untuk memberikan transparansi, dokumentasi historis, serta mendukung analisis wilayah rawan banjir berdasarkan data waktu nyata yang terkumpul.</p>
                     </div>
                 </div>
             </div>
@@ -104,13 +110,7 @@ $userName = $loggedIn ? $_SESSION['nama'] : '';
             <div class="container">
                 <button class="button">Tentang Kami</button>
                 <p class="content">
-                    1 paragraf aja. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in
-                    hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices
-                    mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor
-                    ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at
-                    maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales.
-                    Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu
-                    eros, eget tempus orci facilisis id.
+                    Malang Tangguh adalah platform yang dikembangkan untuk membantu masyarakat Kota Malang dalam menghadapi dan mengantisipasi risiko banjir. Dengan berbagai fitur interaktif, kami berupaya meningkatkan kesiapsiagaan, transparansi informasi, dan kolaborasi antara warga dan pemerintah demi terciptanya kota yang lebih aman dan tangguh, sejalan dengan fokus pada pembangunan berkelanjutan sesuai dengan tujuan SDG 11: Sustainable Cities and Communities. Platform ini dikembangkan oleh Kelompok 2 Angkatan 2023, mahasiswa Program Studi Pendidikan Teknologi Informasi, Fakultas Ilmu Komputer, Universitas Brawijaya, yang berkomitmen untuk menghadirkan solusi teknologi inovatif demi kesejahteraan masyarakat.
                 </p>
                 <div class="emergency-contacts" id="emergency-contacts">
                     <h2>Telepon Darurat</h2>
