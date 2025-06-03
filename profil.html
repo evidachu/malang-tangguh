@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil Pengguna - Malang Tangguh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+      background-color: #e0f0ff;
+    }
+
+    .profile-container {
+      max-width: 400px;
+      margin: 40px auto;
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .profile-header {
+      background:  #003b73;
+      color: white;
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    .profile-header img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: white;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .profile-header h2 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .profile-form {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      margin-bottom: 6px;
+      font-weight: 500;
+      color: #003b73;
+    }
+
+    .form-group input,
+    .form-group select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .button-container button {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .edit-button {
+      background:  #a6c7e8;
+      color: white;
+    }
+
+    .edit-button:hover {
+      background: #00315f;
+    }
+
+    .logout-button {
+      background: #f44336;
+      color: white;
+    }
+
+    .logout-button:hover {
+      background: #d32f2f;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-header">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Foto Profil">
+      <h2>Profil Pengguna</h2>
+    </div>
+    <form class="profile-form">
+      <div class="form-group">
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap">
+      </div>
+      <div class="form-group">
+        <label for="nik">Nomor Identitas (NIK/NIM/NIP)</label>
+        <input type="text" id="nik" name="nik" placeholder="Masukkan nomor identitas">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Masukkan email">
+      </div>
+      <div class="form-group">
+        <label for="telepon">Nomor Telepon</label>
+        <input type="tel" id="telepon" name="telepon" placeholder="Masukkan nomor telepon">
+      </div>
+      <div class="form-group">
+        <label for="alamat">Alamat Domisili</label>
+        <input type="text" id="alamat" name="alamat" placeholder="Masukkan alamat domisili">
+      </div>
+      <div class="form-group">
+        <label for="jenis_kelamin">Jenis Kelamin</label>
+        <select id="jenis_kelamin" name="jenis_kelamin">
+          <option value="">Pilih</option>
+          <option value="Laki-laki">Laki-laki</option>
+          <option value="Perempuan">Perempuan</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="tanggal_lahir">Tanggal Lahir</label>
+        <input type="date" id="tanggal_lahir" name="tanggal_lahir">
+      </div>
+      <div class="button-container">
+        <button type="submit" class="edit-button">Simpan Perubahan</button>
+        <button type="button" class="logout-button">Logout</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

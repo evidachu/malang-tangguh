@@ -4,63 +4,98 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Riwayat Laporan Banjir</title>
-  <link rel="stylesheet" href="riwayat.css" />
-  <link rel="stylesheet" href="header-footer.css">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" />
+  <link href="riwayat.css" rel="stylesheet" />
+  <link href="header-footer.css" rel="stylesheet" />
 </head>
 <body>
-<div id="header-include"></div>
-  <!-- MAIN -->
+  <div id="header-include"></div>
   <main class="laporan-container">
     <h2 class="judul-laporan">Riwayat Laporan Banjir</h2>
+    <div class="filter-section">
+      <input type="text" id="search-input" class="filter-dropdown" placeholder="Cari..." />
+      <select id="kecamatan-select" class="filter-dropdown">
+        <option selected disabled>Pilih Kecamatan</option>
+        <option>Blimbing</option>
+        <option>Kedungkandang</option>
+        <option>Klojen</option>
+        <option>Lowokwaru</option>
+        <option>Sukun</option>
+      </select>
+      <input type="date" class="filter-dropdown" />
+    </div>
+    <div class="table-wrapper">
+      <table class="laporan-tabel">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Kecamatan</th>
+            <th>Jalan</th>
+            <th>Keterangan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td></td><td></td><td></td></tr>
+          <tr><td>2</td><td></td><td></td><td></td></tr>
+          <tr><td>3</td><td></td><td></td><td></td></tr>
+          <tr><td>4</td><td></td><td></td><td></td></tr>
+          <tr><td>5</td><td></td><td></td><td></td></tr>
+          <tr><td>6</td><td></td><td></td><td></td></tr>
+          <tr><td>7</td><td></td><td></td><td></td></tr>
+          <tr><td>8</td><td></td><td></td><td></td></tr>
+          <tr><td>9</td><td></td><td></td><td></td></tr>
+          <tr><td>10</td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <div id="footer-include"></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('header-include').innerHTML = data);
 
-        <div class="filter-section">
-          <input type="date" class="filter-dropdown" />
-          <select class="filter-dropdown">
-            <option selected disabled>Pilih Kecamatan</option>
-            <option>Blimbing</option>
-            <option>Kedungkandang</option>
-            <option>Klojen</option>
-            <option>Lowokwaru</option>
-            <option>Sukun</option>
-          </select>
-        </div>
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer-include').innerHTML = data);
 
-        <div class="table-wrapper">
-            <table class="laporan-tabel">
-              <thead>
-                <tr>
-                  <th>No.</th>
-                  <th>Kecamatan</th>
-                  <th>Jalan</th>
-                  <th>Keterangan</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>1</td><td></td><td></td><td></td></tr>
-                <tr><td>2</td><td></td><td></td><td></td></tr>
-                <tr><td>3</td><td></td><td></td><td></td></tr>
-                <tr><td>4</td><td></td><td></td><td></td></tr>
-                <tr><td>5</td><td></td><td></td><td></td></tr>
-                <tr><td>6</td><td></td><td></td><td></td></tr>
-                <tr><td>7</td><td></td><td></td><td></td></tr>
-                <tr><td>8</td><td></td><td></td><td></td></tr>
-                <tr><td>9</td><td></td><td></td><td></td></tr>
-                <tr><td>10</td><td></td><td></td><td></td></tr>
-              </tbody>
-            </table>
-          </div>
-        </main>
+    $(document).ready(function() {
+      // Initialize DataTables
+      const table = $('.laporan-tabel').DataTable({
+        searching: true,
+        ordering: true,
+        paging: true,
+        pageLength: 10,
+        dom: 't<"bottom"p>', // Only show table and pagination
+        language: {
+          paginate: {
+            next: 'Selanjutnya',
+            previous: 'Sebelumnya'
+          }
+        }
+      });
 
-<div id="footer-include"></div>
+      // Initialize Select2 with sorted options
+      $('#kecamatan-select').select2({
+        placeholder: "Pilih Kecamatan",
+        allowClear: true
+      }).val(null).trigger('change');
 
-    <script>
-        fetch('header.html')
-            .then(res => res.text())
-            .then(data => document.getElementById('header-include').innerHTML = data);
+      // Custom search function
+      $('#search-input').on('keyup', function() {
+        table.search(this.value).draw();
+      });
 
-        fetch('footer.html')
-            .then(res => res.text())
-            .then(data => document.getElementById('footer-include').innerHTML = data);
-    </script>
+      // Filter by kecamatan
+      $('#kecamatan-select').on('change', function() {
+        const selectedKecamatan = $(this).val() || '';
+        table.column(1).search(selectedKecamatan).draw();
+      });
+    });
+  </script>
 </body>
 </html>

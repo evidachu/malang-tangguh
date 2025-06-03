@@ -18,43 +18,17 @@
     </div>
  
     <div class="header-right">
-        <a href="landing-page.html#emergency-contacts" class="emergency">Telepon Darurat</a>
         <a href="landing-page.html#about-section" class="about">Tentang Kami</a>
+        <a href="landing-page.html#emergency-contacts" class="emergency">Telepon Darurat</a>
         <div class="profile-dropdown" id="profileDropdown">
-            <button class="login-btn" id="loginBtn">Login</button>
-            <button class="profile-btn" id="profileBtn" style="display: none;">
+            <button class="login-btn" id="loginBtn" onclick="window.location.href='login.html'">Login</button>
+            <button class="profile-btn" id="profileBtn" style="display:none;">
                 <span class="profile-circle">A</span>
             </button>
-            <div class="profile-menu" id="profileMenu" style="display: none;">
+            <div class="profile-menu" id="profileMenu" style="display:none;">
                 <a href="#">Profile</a>
-                <a href="#" id="logoutBtn">Logout</a>
+                <a href="#">Logout</a>
             </div>
         </div>
     </div>
 </header>
-
-<script>
-    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-    const loginBtn = document.getElementById('loginBtn');
-    const profileBtn = document.getElementById('profileBtn');
-    const profileMenu = document.getElementById('profileMenu');
-    const logoutBtn = document.getElementById('logoutBtn');
-
-    if (isLoggedIn) {
-        loginBtn.style.display = 'none'; 
-        profileBtn.style.display = 'block'; 
-    } else {
-        loginBtn.style.display = 'block';  
-        profileBtn.style.display = 'none'; 
-    }
-
-    loginBtn.addEventListener('click', () => {
-        localStorage.setItem('isLoggedIn', 'true');
-        window.location.reload();
-    });
-
-    logoutBtn.addEventListener('click', () => {
-        localStorage.setItem('isLoggedIn', 'false');
-        window.location.reload();
-    });
-</script>
