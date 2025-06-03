@@ -38,7 +38,7 @@ $email = $_SESSION['email'] ?? 'Tidak tersedia';
     }
 
     .profile-header {
-      background:  #003b73;
+      background:#2176ae;
       color: white;
       text-align: center;
       padding: 40px 20px 20px;
@@ -126,7 +126,7 @@ $email = $_SESSION['email'] ?? 'Tidak tersedia';
     }
 
     .logout-button:hover {
-      background: #d32f2f;
+      background:#C66852;
     }
 
     .logout-link {

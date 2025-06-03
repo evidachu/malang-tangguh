@@ -1,7 +1,7 @@
 <?php
 $host = 'localhost';
 $username = 'root';
-$password = '12345678';
+$password = '';
 $database = 'malang_tangguh';
 
 global $conn;
